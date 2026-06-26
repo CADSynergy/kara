@@ -1,0 +1,68 @@
+name: Model improvement
+description: Propose an improvement to a simulation model, equation, map, controller, or physical assumption.
+title: "[Model]: "
+labels: ["model", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for improvements related to KĀRĀ's engineering models.
+
+  - type: dropdown
+    id: model-area
+    attributes:
+      label: Model area
+      options:
+        - Longitudinal vehicle dynamics
+        - Road-load model
+        - ICE model
+        - Electric motor model
+        - Battery model
+        - Transmission model
+        - Hybrid control strategy
+        - Regenerative braking
+        - Accessory loads
+        - Post-processing metrics
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current limitation
+      description: What is missing, simplified, inaccurate, or unclear in the current model?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed improvement
+      description: Describe the proposed model improvement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References or validation basis
+      description: Add references, equations, public datasets, papers, standards, or benchmark cases if available.
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected impact
+      description: How would this improve accuracy, usability, validation, or extensibility?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Confidentiality confirmation
+      options:
+        - label: I confirm that this proposal does not disclose confidential, proprietary, or restricted engineering data.
+          required: true

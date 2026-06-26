@@ -1,0 +1,59 @@
+name: Feature request
+description: Suggest a new capability or workflow for KĀRĀ.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a new feature for KĀRĀ.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: What problem does this feature solve?
+      placeholder: "Example: I want to compare two vehicle configurations across the same drive cycle."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the feature you would like to see.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Project area
+      options:
+        - Core simulation
+        - Drive-cycle handling
+        - Vehicle configuration
+        - Hybrid / EV modeling
+        - Post-processing
+        - Validation
+        - CADSynergy integration
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you considered any alternative approaches?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any useful technical context, references, or examples.
+    validations:
+      required: false

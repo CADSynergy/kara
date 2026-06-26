@@ -1,0 +1,43 @@
+name: Documentation improvement
+description: Suggest an improvement to documentation, examples, README, tutorials, or explanations.
+title: "[Docs]: "
+labels: ["documentation", "triage"]
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Documentation location
+      description: Where is the issue or improvement needed?
+      placeholder: "Example: README.md, docs/DATA_POLICY.md, examples/bev_demo.ipynb"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What should be improved?
+      description: Describe what is missing, confusing, outdated, or incorrect.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: Suggest wording, structure, examples, or references.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Primary audience
+      options:
+        - New users
+        - Contributors
+        - Researchers
+        - Automotive engineers
+        - CADSynergy maintainers
+        - Other
+    validations:
+      required: false

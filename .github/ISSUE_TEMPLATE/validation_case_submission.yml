@@ -1,0 +1,80 @@
+name: Validation case submission
+description: Submit or propose a validation case for KĀRĀ.
+title: "[Validation]: "
+labels: ["validation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a validation case comparing simulated and measured or reference results.
+
+  - type: input
+    id: case-name
+    attributes:
+      label: Validation case name
+      placeholder: "Example: BEV urban cycle energy validation"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: validation-type
+    attributes:
+      label: Validation type
+      options:
+        - Public benchmark
+        - Literature comparison
+        - Synthetic reference case
+        - Measured non-confidential data
+        - Private industrial case summary
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: model
+    attributes:
+      label: Model configuration
+      description: Describe the vehicle, component assumptions, drive cycle, and simulation settings.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference or measured data
+      description: Describe the reference result and its source. Do not include confidential raw data.
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Validation metrics
+      description: Which metrics should be compared?
+      placeholder: |
+        Fuel consumption:
+        Energy consumption:
+        SOC trace:
+        Range:
+        Acceleration:
+        Error metric:
+    validations:
+      required: true
+
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Known limitations
+      description: Describe assumptions, uncertainty, missing data, or limitations.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Data and rights confirmation
+      options:
+        - label: I confirm that the submitted information can be discussed publicly.
+          required: true
+        - label: I confirm that no confidential OEM, supplier, or personally identifiable data is disclosed.
+          required: true
