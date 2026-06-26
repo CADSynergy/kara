@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: KĀRĀ discussions
+    url: https://github.com/CADSynergy/kara/discussions
+    about: Ask questions, share ideas, and discuss roadmap items here.
+  - name: CADSynergy
+    url: https://github.com/CADSynergy
+    about: Visit the CADSynergy GitHub organization.
