@@ -1,0 +1,76 @@
+name: Bug report
+description: Report a reproducible problem in KĀRĀ.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug in KĀRĀ.
+        Please provide enough detail so maintainers can reproduce and investigate the issue.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the problem.
+      placeholder: "Example: The BEV demo fails when loading a drive-cycle CSV with missing altitude values."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps needed to reproduce the issue.
+      placeholder: |
+        1. Load ...
+        2. Run ...
+        3. See error ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Provide your environment details.
+      placeholder: |
+        OS:
+        Python version:
+        KĀRĀ version or commit:
+        Installation method:
+    validations:
+      required: false
+
+  - type: textarea
+    id: data
+    attributes:
+      label: Input data or minimal example
+      description: Share a minimal non-confidential example if possible. Do not upload private, proprietary, or personally identifiable data.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: data-rights
+    attributes:
+      label: Data and confidentiality confirmation
+      options:
+        - label: I confirm that any data or files I provide are non-confidential and I have the right to share them publicly.
+          required: true
