@@ -1,0 +1,88 @@
+name: Drive-cycle dataset submission
+description: Submit or propose a public drive-cycle dataset for KĀRĀ.
+title: "[DriveCycle]: "
+labels: ["drive-cycle", "data", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a public drive-cycle dataset.
+        Do not submit private GPS traces, confidential fleet data, or personally identifiable data.
+
+  - type: input
+    id: dataset-name
+    attributes:
+      label: Dataset name
+      placeholder: "Example: Tehran Urban Demo Cycle v0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: "City / region / route, if public and non-sensitive"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cycle-type
+    attributes:
+      label: Cycle type
+      options:
+        - Urban
+        - Highway
+        - Mixed
+        - Mountain / grade-sensitive
+        - Hot climate
+        - Cold climate
+        - Taxi / ride-hailing
+        - Delivery
+        - Synthetic
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: metadata
+    attributes:
+      label: Dataset metadata
+      description: Provide sampling rate, duration, speed units, altitude/grade availability, vehicle class, traffic condition, and preprocessing details.
+      placeholder: |
+        Sampling rate:
+        Duration:
+        Speed unit:
+        Altitude/grade:
+        Vehicle class:
+        Traffic condition:
+        Preprocessing:
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source and rights
+      description: Explain where the dataset comes from and why it can be shared publicly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation or quality notes
+      description: Describe any filtering, outlier removal, route checks, or comparison with known cycles.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Data publication confirmation
+      options:
+        - label: I confirm that I have the right to publish this dataset publicly.
+          required: true
+        - label: I confirm that the dataset does not contain personally identifiable information or confidential industrial data.
+          required: true
+        - label: I understand that maintainers may reject, anonymize, modify, or request additional metadata before accepting this dataset.
+          required: true
